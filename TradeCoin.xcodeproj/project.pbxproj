@@ -13,6 +13,7 @@
 		27D9C87320E17A9900733733 /* TradeCoin.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 27D9C87120E17A9900733733 /* TradeCoin.xcdatamodeld */; };
 		27D9C87520E17A9B00733733 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 27D9C87420E17A9B00733733 /* Assets.xcassets */; };
 		27D9C87820E17A9B00733733 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27D9C87620E17A9B00733733 /* LaunchScreen.storyboard */; };
+		C0E0618A9656E928D104C06A /* Pods_TradeCoin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2971875FAC0022A3904D8F11 /* Pods_TradeCoin.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,9 @@
 		27D9C87420E17A9B00733733 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		27D9C87720E17A9B00733733 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		27D9C87920E17A9B00733733 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2971875FAC0022A3904D8F11 /* Pods_TradeCoin.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TradeCoin.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		57F3B26F538EA621D30052A7 /* Pods-TradeCoin.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TradeCoin.release.xcconfig"; path = "Pods/Target Support Files/Pods-TradeCoin/Pods-TradeCoin.release.xcconfig"; sourceTree = "<group>"; };
+		CE4CF086F8FE3B5595EC7351 /* Pods-TradeCoin.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TradeCoin.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TradeCoin/Pods-TradeCoin.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +35,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C0E0618A9656E928D104C06A /* Pods_TradeCoin.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +47,8 @@
 			children = (
 				27D9C86920E17A9900733733 /* TradeCoin */,
 				27D9C86820E17A9900733733 /* Products */,
+				3328F995AA01FC8F97B84BA1 /* Pods */,
+				2C47D7C0932F7AD9079A05FC /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -67,6 +74,23 @@
 			path = TradeCoin;
 			sourceTree = "<group>";
 		};
+		2C47D7C0932F7AD9079A05FC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2971875FAC0022A3904D8F11 /* Pods_TradeCoin.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3328F995AA01FC8F97B84BA1 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				CE4CF086F8FE3B5595EC7351 /* Pods-TradeCoin.debug.xcconfig */,
+				57F3B26F538EA621D30052A7 /* Pods-TradeCoin.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,9 +98,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 27D9C87C20E17A9B00733733 /* Build configuration list for PBXNativeTarget "TradeCoin" */;
 			buildPhases = (
+				BB8CBADF9D1CFE854CFA9A0A /* [CP] Check Pods Manifest.lock */,
 				27D9C86320E17A9900733733 /* Sources */,
 				27D9C86420E17A9900733733 /* Frameworks */,
 				27D9C86520E17A9900733733 /* Resources */,
+				D63E41CBB4A35DCE23B62BEF /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -132,6 +158,45 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		BB8CBADF9D1CFE854CFA9A0A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TradeCoin-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D63E41CBB4A35DCE23B62BEF /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-TradeCoin/Pods-TradeCoin-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TradeCoin/Pods-TradeCoin-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		27D9C86320E17A9900733733 /* Sources */ = {
@@ -282,6 +347,7 @@
 		};
 		27D9C87D20E17A9B00733733 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CE4CF086F8FE3B5595EC7351 /* Pods-TradeCoin.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Manual;
@@ -301,6 +367,7 @@
 		};
 		27D9C87E20E17A9B00733733 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 57F3B26F538EA621D30052A7 /* Pods-TradeCoin.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Manual;
