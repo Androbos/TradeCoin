@@ -13,6 +13,7 @@
 		27D9C87320E17A9900733733 /* TradeCoin.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 27D9C87120E17A9900733733 /* TradeCoin.xcdatamodeld */; };
 		27D9C87520E17A9B00733733 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 27D9C87420E17A9B00733733 /* Assets.xcassets */; };
 		27D9C87820E17A9B00733733 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27D9C87620E17A9B00733733 /* LaunchScreen.storyboard */; };
+		27D9C88020E181B700733733 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D9C87F20E181B700733733 /* LoginViewModel.swift */; };
 		C0E0618A9656E928D104C06A /* Pods_TradeCoin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2971875FAC0022A3904D8F11 /* Pods_TradeCoin.framework */; };
 /* End PBXBuildFile section */
 
@@ -25,6 +26,7 @@
 		27D9C87420E17A9B00733733 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		27D9C87720E17A9B00733733 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		27D9C87920E17A9B00733733 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		27D9C87F20E181B700733733 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		2971875FAC0022A3904D8F11 /* Pods_TradeCoin.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TradeCoin.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		57F3B26F538EA621D30052A7 /* Pods-TradeCoin.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TradeCoin.release.xcconfig"; path = "Pods/Target Support Files/Pods-TradeCoin/Pods-TradeCoin.release.xcconfig"; sourceTree = "<group>"; };
 		CE4CF086F8FE3B5595EC7351 /* Pods-TradeCoin.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TradeCoin.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TradeCoin/Pods-TradeCoin.debug.xcconfig"; sourceTree = "<group>"; };
@@ -70,6 +72,7 @@
 				27D9C87620E17A9B00733733 /* LaunchScreen.storyboard */,
 				27D9C87920E17A9B00733733 /* Info.plist */,
 				27D9C87120E17A9900733733 /* TradeCoin.xcdatamodeld */,
+				27D9C87F20E181B700733733 /* LoginViewModel.swift */,
 			);
 			path = TradeCoin;
 			sourceTree = "<group>";
@@ -207,6 +210,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				27D9C88020E181B700733733 /* LoginViewModel.swift in Sources */,
 				27D9C86D20E17A9900733733 /* ViewController.swift in Sources */,
 				27D9C86B20E17A9900733733 /* AppDelegate.swift in Sources */,
 				27D9C87320E17A9900733733 /* TradeCoin.xcdatamodeld in Sources */,
