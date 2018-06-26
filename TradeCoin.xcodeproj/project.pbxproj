@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		278637FC20E2D80900C095B7 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 278637FB20E2D80900C095B7 /* SWRevealViewController.m */; };
 		27D9C86B20E17A9900733733 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D9C86A20E17A9900733733 /* AppDelegate.swift */; };
 		27D9C86D20E17A9900733733 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D9C86C20E17A9900733733 /* ViewController.swift */; };
 		27D9C87020E17A9900733733 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27D9C86E20E17A9900733733 /* Main.storyboard */; };
@@ -15,10 +16,14 @@
 		27D9C87820E17A9B00733733 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27D9C87620E17A9B00733733 /* LaunchScreen.storyboard */; };
 		27D9C88020E181B700733733 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D9C87F20E181B700733733 /* LoginViewModel.swift */; };
 		27D9C88220E184B300733733 /* StockTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D9C88120E184B300733733 /* StockTableViewController.swift */; };
+		27D9C8A220E19FE600733733 /* CompanyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D9C8A120E19FE600733733 /* CompanyTableViewCell.swift */; };
 		C0E0618A9656E928D104C06A /* Pods_TradeCoin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2971875FAC0022A3904D8F11 /* Pods_TradeCoin.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		278637FA20E2D80900C095B7 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
+		278637FB20E2D80900C095B7 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
+		278637FD20E2D85C00C095B7 /* TradeCoin-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TradeCoin-Bridging-Header.h"; sourceTree = "<group>"; };
 		27D9C86720E17A9900733733 /* TradeCoin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TradeCoin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		27D9C86A20E17A9900733733 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		27D9C86C20E17A9900733733 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -29,6 +34,7 @@
 		27D9C87920E17A9B00733733 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		27D9C87F20E181B700733733 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		27D9C88120E184B300733733 /* StockTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockTableViewController.swift; sourceTree = "<group>"; };
+		27D9C8A120E19FE600733733 /* CompanyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyTableViewCell.swift; sourceTree = "<group>"; };
 		2971875FAC0022A3904D8F11 /* Pods_TradeCoin.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TradeCoin.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		57F3B26F538EA621D30052A7 /* Pods-TradeCoin.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TradeCoin.release.xcconfig"; path = "Pods/Target Support Files/Pods-TradeCoin/Pods-TradeCoin.release.xcconfig"; sourceTree = "<group>"; };
 		CE4CF086F8FE3B5595EC7351 /* Pods-TradeCoin.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TradeCoin.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TradeCoin/Pods-TradeCoin.debug.xcconfig"; sourceTree = "<group>"; };
@@ -46,6 +52,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		278637F920E2D80900C095B7 /* lib */ = {
+			isa = PBXGroup;
+			children = (
+				278637FA20E2D80900C095B7 /* SWRevealViewController.h */,
+				278637FB20E2D80900C095B7 /* SWRevealViewController.m */,
+			);
+			path = lib;
+			sourceTree = "<group>";
+		};
 		27D9C85E20E17A9900733733 = {
 			isa = PBXGroup;
 			children = (
@@ -70,12 +85,15 @@
 				27D9C86A20E17A9900733733 /* AppDelegate.swift */,
 				27D9C86C20E17A9900733733 /* ViewController.swift */,
 				27D9C86E20E17A9900733733 /* Main.storyboard */,
+				27D9C8A120E19FE600733733 /* CompanyTableViewCell.swift */,
 				27D9C88120E184B300733733 /* StockTableViewController.swift */,
+				278637F920E2D80900C095B7 /* lib */,
 				27D9C87420E17A9B00733733 /* Assets.xcassets */,
 				27D9C87620E17A9B00733733 /* LaunchScreen.storyboard */,
 				27D9C87920E17A9B00733733 /* Info.plist */,
 				27D9C87120E17A9900733733 /* TradeCoin.xcdatamodeld */,
 				27D9C87F20E181B700733733 /* LoginViewModel.swift */,
+				278637FD20E2D85C00C095B7 /* TradeCoin-Bridging-Header.h */,
 			);
 			path = TradeCoin;
 			sourceTree = "<group>";
@@ -213,7 +231,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				278637FC20E2D80900C095B7 /* SWRevealViewController.m in Sources */,
 				27D9C88020E181B700733733 /* LoginViewModel.swift in Sources */,
+				27D9C8A220E19FE600733733 /* CompanyTableViewCell.swift in Sources */,
 				27D9C86D20E17A9900733733 /* ViewController.swift in Sources */,
 				27D9C86B20E17A9900733733 /* AppDelegate.swift in Sources */,
 				27D9C88220E184B300733733 /* StockTableViewController.swift in Sources */,
@@ -372,6 +392,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = info.Sa2rdayMorning.TradeCoin;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "TradeCoin/TradeCoin-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -392,6 +413,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = info.Sa2rdayMorning.TradeCoin;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "TradeCoin/TradeCoin-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

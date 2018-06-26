@@ -7,45 +7,107 @@
 //
 
 import UIKit
+import Alamofire
+
+struct Company: Decodable {
+    //let id: Int
+    let symbol: String
+    let companyName: String
+    let latestPrice: Double
+    let change: Double
+    let changePercent: Double
+    
+    //let link: String
+    
+}
 
 class StockTableViewController: UITableViewController {
 
+    @IBOutlet weak var menuBarButton: UIBarButtonItem!
+    
+    var urlString = "https://api.iextrading.com/1.0/stock/market/list/mostactive"
+    var companies = [Company]()
+    
+    fileprivate func fetchJSON() {
+        guard let url = URL(string: urlString) else { return }
+        URLSession.shared.dataTask(with: url) { (data, _, err) in
+            DispatchQueue.main.async {
+                if let err = err {
+                    print("Failed to get data from url:", err)
+                    return
+                }
+                
+                guard let data = data else { return }
+                
+                do {
+                   
+                    let decoder = JSONDecoder()
+                    decoder.keyDecodingStrategy = .convertFromSnakeCase
+                    self.companies = try decoder.decode([Company].self, from: data)
+                    self.tableView.reloadData()
+                } catch let jsonErr {
+                    print("Failed to decode:", jsonErr)
+                }
+            }
+            }.resume()
+    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        
+        if self.revealViewController() != nil {
+            menuBarButton.target = self.revealViewController()
+            menuBarButton.action = #selector(SWRevealViewController.revealToggle(_:))
+            self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
+        }
+        
+        fetchJSON()
+     // fetchData()
     }
+    
+    func fetchData() {
+        Alamofire.request(urlString).responseJSON { response in
+            debugPrint(response)
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+            if let json = response.result.value {
+                print("JSON: \(json)")
+                
+            }
+        }
     }
 
     // MARK: - Table view data source
 
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
-    }
-
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
+        return companies.count
     }
 
-    /*
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
-        // Configure the cell...
-
+        let cell = tableView.dequeueReusableCell(withIdentifier: "StockCell", for: indexPath) as! CompanyTableViewCell
+        let company = companies[indexPath.row]
+        
+        cell.companyNameLabel.text = company.companyName
+        cell.symbolLabel.text = company.symbol
+        cell.latestPriceLabel.text = "\(company.latestPrice)"
+        if (company.change < 0) {
+             cell.changeLabel.textColor = .red
+             cell.changePercentLabel.textColor = .red
+        } else {
+            cell.changeLabel.textColor = .green
+            cell.changePercentLabel.textColor = .green
+        }
+        cell.changeLabel.text = "\(company.change)"
+        cell.changePercentLabel.text = "\(company.changePercent)%"
+        
         return cell
     }
-    */
+    
+    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat
+    {
+        return 126.0;//Choose your custom row height
+    }
 
     /*
     // Override to support conditional editing of the table view.
