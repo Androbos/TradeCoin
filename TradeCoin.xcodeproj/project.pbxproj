@@ -17,6 +17,7 @@
 		27D9C88020E181B700733733 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D9C87F20E181B700733733 /* LoginViewModel.swift */; };
 		27D9C88220E184B300733733 /* StockTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D9C88120E184B300733733 /* StockTableViewController.swift */; };
 		27D9C8A220E19FE600733733 /* CompanyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D9C8A120E19FE600733733 /* CompanyTableViewCell.swift */; };
+		57FE6F0B20E5BC40000B2806 /* Company.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57FE6F0A20E5BC40000B2806 /* Company.swift */; };
 		C0E0618A9656E928D104C06A /* Pods_TradeCoin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2971875FAC0022A3904D8F11 /* Pods_TradeCoin.framework */; };
 /* End PBXBuildFile section */
 
@@ -37,6 +38,7 @@
 		27D9C8A120E19FE600733733 /* CompanyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyTableViewCell.swift; sourceTree = "<group>"; };
 		2971875FAC0022A3904D8F11 /* Pods_TradeCoin.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TradeCoin.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		57F3B26F538EA621D30052A7 /* Pods-TradeCoin.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TradeCoin.release.xcconfig"; path = "Pods/Target Support Files/Pods-TradeCoin/Pods-TradeCoin.release.xcconfig"; sourceTree = "<group>"; };
+		57FE6F0A20E5BC40000B2806 /* Company.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Company.swift; sourceTree = "<group>"; };
 		CE4CF086F8FE3B5595EC7351 /* Pods-TradeCoin.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TradeCoin.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TradeCoin/Pods-TradeCoin.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -87,6 +89,7 @@
 				27D9C86E20E17A9900733733 /* Main.storyboard */,
 				27D9C8A120E19FE600733733 /* CompanyTableViewCell.swift */,
 				27D9C88120E184B300733733 /* StockTableViewController.swift */,
+				57FE6F0A20E5BC40000B2806 /* Company.swift */,
 				278637F920E2D80900C095B7 /* lib */,
 				27D9C87420E17A9B00733733 /* Assets.xcassets */,
 				27D9C87620E17A9B00733733 /* LaunchScreen.storyboard */,
@@ -238,6 +241,7 @@
 				27D9C86B20E17A9900733733 /* AppDelegate.swift in Sources */,
 				27D9C88220E184B300733733 /* StockTableViewController.swift in Sources */,
 				27D9C87320E17A9900733733 /* TradeCoin.xcdatamodeld in Sources */,
+				57FE6F0B20E5BC40000B2806 /* Company.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -385,6 +389,7 @@
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = TradeCoin/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -406,6 +411,7 @@
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = TradeCoin/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
