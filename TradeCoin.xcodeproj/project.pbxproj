@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		270ACFE120E9690D00F0A15E /* SettingsIconImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 270ACFE020E9690D00F0A15E /* SettingsIconImage.swift */; };
+		270ACFE620E969B900F0A15E /* NavigationTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 270ACFE520E969B900F0A15E /* NavigationTableViewController.swift */; };
+		270ACFE820E96A8B00F0A15E /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 270ACFE720E96A8B00F0A15E /* Constants.swift */; };
+		270ACFEA20E96DCA00F0A15E /* DetailsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 270ACFE920E96DCA00F0A15E /* DetailsTableViewController.swift */; };
 		278637FC20E2D80900C095B7 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 278637FB20E2D80900C095B7 /* SWRevealViewController.m */; };
 		27D9C86B20E17A9900733733 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D9C86A20E17A9900733733 /* AppDelegate.swift */; };
 		27D9C86D20E17A9900733733 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D9C86C20E17A9900733733 /* ViewController.swift */; };
@@ -22,6 +26,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		270ACFE020E9690D00F0A15E /* SettingsIconImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsIconImage.swift; sourceTree = "<group>"; };
+		270ACFE520E969B900F0A15E /* NavigationTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationTableViewController.swift; sourceTree = "<group>"; };
+		270ACFE720E96A8B00F0A15E /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		270ACFE920E96DCA00F0A15E /* DetailsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsTableViewController.swift; sourceTree = "<group>"; };
 		278637FA20E2D80900C095B7 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
 		278637FB20E2D80900C095B7 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
 		278637FD20E2D85C00C095B7 /* TradeCoin-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TradeCoin-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -97,6 +105,10 @@
 				27D9C87120E17A9900733733 /* TradeCoin.xcdatamodeld */,
 				27D9C87F20E181B700733733 /* LoginViewModel.swift */,
 				278637FD20E2D85C00C095B7 /* TradeCoin-Bridging-Header.h */,
+				270ACFE020E9690D00F0A15E /* SettingsIconImage.swift */,
+				270ACFE520E969B900F0A15E /* NavigationTableViewController.swift */,
+				270ACFE720E96A8B00F0A15E /* Constants.swift */,
+				270ACFE920E96DCA00F0A15E /* DetailsTableViewController.swift */,
 			);
 			path = TradeCoin;
 			sourceTree = "<group>";
@@ -213,12 +225,14 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-TradeCoin/Pods-TradeCoin-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Charts/Charts.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Charts.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 			);
@@ -235,9 +249,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				278637FC20E2D80900C095B7 /* SWRevealViewController.m in Sources */,
+				270ACFE820E96A8B00F0A15E /* Constants.swift in Sources */,
+				270ACFE120E9690D00F0A15E /* SettingsIconImage.swift in Sources */,
 				27D9C88020E181B700733733 /* LoginViewModel.swift in Sources */,
+				270ACFEA20E96DCA00F0A15E /* DetailsTableViewController.swift in Sources */,
 				27D9C8A220E19FE600733733 /* CompanyTableViewCell.swift in Sources */,
 				27D9C86D20E17A9900733733 /* ViewController.swift in Sources */,
+				270ACFE620E969B900F0A15E /* NavigationTableViewController.swift in Sources */,
 				27D9C86B20E17A9900733733 /* AppDelegate.swift in Sources */,
 				27D9C88220E184B300733733 /* StockTableViewController.swift in Sources */,
 				27D9C87320E17A9900733733 /* TradeCoin.xcdatamodeld in Sources */,
@@ -386,6 +404,7 @@
 			baseConfigurationReference = CE4CF086F8FE3B5595EC7351 /* Pods-TradeCoin.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = TradeCoin/Info.plist;
@@ -408,6 +427,7 @@
 			baseConfigurationReference = 57F3B26F538EA621D30052A7 /* Pods-TradeCoin.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = TradeCoin/Info.plist;

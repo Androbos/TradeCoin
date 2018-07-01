@@ -10,6 +10,8 @@ import UIKit
 import Alamofire
 
 //dev,icon, loading screentouch auth, inet senitive, refacroring, search icon, person icon, 4 cells, main view, cell img, 5 icons, TCleanArchitectureRxSwift, MVVM, RX, CoreDat, UIKIT, Tests, Brian
+// coredata after fetch
+//
 class StockTableViewController: UITableViewController {
 
     @IBOutlet weak var menuBarButton: UIBarButtonItem!
