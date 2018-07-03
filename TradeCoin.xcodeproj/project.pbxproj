@@ -62,6 +62,58 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		27584EFC20EAB30D00675A15 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		27584EFD20EAB31800675A15 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		27584EFE20EAB32200675A15 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		27584EFF20EAB32A00675A15 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		27584F0020EAB33200675A15 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		27584F0120EAB33900675A15 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		27584F0220EAB3B200675A15 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				27D9C86E20E17A9900733733 /* Main.storyboard */,
+				27D9C87420E17A9B00733733 /* Assets.xcassets */,
+				27D9C87620E17A9B00733733 /* LaunchScreen.storyboard */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		278637F920E2D80900C095B7 /* lib */ = {
 			isa = PBXGroup;
 			children = (
@@ -92,21 +144,25 @@
 		27D9C86920E17A9900733733 /* TradeCoin */ = {
 			isa = PBXGroup;
 			children = (
+				27584F0220EAB3B200675A15 /* Supporting Files */,
+				27584F0120EAB33900675A15 /* Controller */,
+				27584F0020EAB33200675A15 /* View */,
+				27584EFF20EAB32A00675A15 /* ViewModel */,
+				27584EFE20EAB32200675A15 /* Model */,
+				27584EFD20EAB31800675A15 /* Services */,
+				27584EFC20EAB30D00675A15 /* Helpers */,
 				27D9C86A20E17A9900733733 /* AppDelegate.swift */,
 				27D9C86C20E17A9900733733 /* ViewController.swift */,
-				27D9C86E20E17A9900733733 /* Main.storyboard */,
 				27D9C8A120E19FE600733733 /* CompanyTableViewCell.swift */,
 				27D9C88120E184B300733733 /* StockTableViewController.swift */,
 				57FE6F0A20E5BC40000B2806 /* Company.swift */,
 				278637F920E2D80900C095B7 /* lib */,
-				27D9C87420E17A9B00733733 /* Assets.xcassets */,
-				27D9C87620E17A9B00733733 /* LaunchScreen.storyboard */,
-				27D9C87920E17A9B00733733 /* Info.plist */,
 				27D9C87120E17A9900733733 /* TradeCoin.xcdatamodeld */,
 				27D9C87F20E181B700733733 /* LoginViewModel.swift */,
 				278637FD20E2D85C00C095B7 /* TradeCoin-Bridging-Header.h */,
 				270ACFE020E9690D00F0A15E /* SettingsIconImage.swift */,
 				270ACFE520E969B900F0A15E /* NavigationTableViewController.swift */,
+				27D9C87920E17A9B00733733 /* Info.plist */,
 				270ACFE720E96A8B00F0A15E /* Constants.swift */,
 				270ACFE920E96DCA00F0A15E /* DetailsTableViewController.swift */,
 			);
