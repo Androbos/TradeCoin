@@ -7,7 +7,9 @@ Stack: MVVM+Rx, Swift, Ukit, Alamofire, Core Data; ; Quick/Nimble, CircleCI+fast
 Pods:
 
 ToDO:
-
+* Update to MVVM
+* cell setup
+* services
 * DetailView + Add CoreData+ MVVM
   More:
 
